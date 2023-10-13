@@ -98,8 +98,18 @@ main {
 }
 
 /* Footer*/
-footer {
-    background-color: orange;
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
 }
 
 /*  Media query : for tabets and larger devices */
@@ -134,7 +144,6 @@ footer {
     }
 
     /* Main Content */
-
     main {
         /* push main content down to accommodate larger header */
         margin-top: 79px;

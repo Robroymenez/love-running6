@@ -20,6 +20,14 @@ body {
 
 }
 
+h1,
+h2,
+h3 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
+}
 
 
 /* Header */
@@ -42,12 +50,6 @@ header a {
 
 }
 
-h1 {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #252525;
-}
 
 #menu {
     font-size: 110%;
@@ -97,14 +99,30 @@ main {
     margin-top: 47px;
 }
 
-/* HHero section */
+/* Hero section */
 
 #hero {
     height: 600px;
     width: 100%;
     background: url(../images/hero-image.webp) no-repeat center center/cover;
+    position: relative;
 }
 
+#cover-text {
+    background-color: rgba(249, 109, 107, .7);
+    font-size: 130%;
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+    min-height: 200px;
+    padding-top: 40px;
+    padding-left: 10px;
+}
+
+#cover-text>h2,
+#cover-text>h3 {
+    color: #ffffff;
+}
 
 /* Footer*/
 #social-networks {
@@ -157,6 +175,13 @@ main {
         /* push main content down to accommodate larger header */
         margin-top: 62px;
     }
+
+    /* Hero */
+    #cover-text {
+        width: 300px;
+        right: 50px;
+    }
+
 }
 
 /* Large devices ( laptops and desktops, 992px and up) */

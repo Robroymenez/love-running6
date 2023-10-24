@@ -1,5 +1,4 @@
 /* Google fonts import */
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 /* Asterisk wildcard selector to override default styles added by the browser */
@@ -17,7 +16,6 @@ body {
     /* Generic project styles */
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
-
 }
 
 h1,
@@ -33,7 +31,6 @@ h3 {
     display: none;
 }
 
-
 /* Header */
 header {
     background-color: #ffffff;
@@ -45,15 +42,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-
 }
 
 header a {
     text-decoration: none;
     color: inherit;
-
 }
-
 
 #menu {
     font-size: 110%;
@@ -69,8 +63,7 @@ header a {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/* navbar styles with dropdown toggle */
-
+/* Navbar styles with dropdown toggle */
 nav {
     position: absolute;
     background-color: #ffffff;
@@ -82,7 +75,7 @@ nav {
     top: 100%;
 }
 
-/*nav toggle */
+/* Nav toggle */
 #nav-toggle:checked~nav {
     display: block;
 }
@@ -97,23 +90,26 @@ nav {
 
 /* Main content */
 main {
-
-    /*make main element take up any surplus to push the footer down*/
+    /* Enlarge main element to push footer down*/
     flex: 1 0 auto;
+    /* Add margin at the top to prevent content from being covered by the header */
     margin-top: 47px;
+    /* Enable flex properties for child elements */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Hero section */
-
 #hero {
     height: 600px;
     width: 100%;
-    background: url(../images/hero-image.webp) no-repeat center center/cover;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
     position: relative;
 }
 
 #cover-text {
-    background-color: rgba(249, 109, 107, .7);
+    /* Final rgba value sets the opacity so it is semi-transparent */
+    background-color: rgba(241, 109, 107, .7);
     font-size: 130%;
     position: absolute;
     bottom: 30px;
@@ -128,7 +124,7 @@ main {
     color: #ffffff;
 }
 
-/*reason section*/
+/* Reasons section */
 #reasons {
     width: 90%;
     margin: 20px auto;
@@ -150,7 +146,7 @@ main {
     padding: 0 20px;
 }
 
-hr {
+#benefits hr {
     border-top: 1px solid #3a3a3a;
     margin: 5px 0;
 }
@@ -189,7 +185,7 @@ hr {
     Each div will expand to fill the available space on its row */
     flex-basis: 200px;
     flex-grow: 1;
-    /* Creates a grid of meetup time divs over the background image */
+    /* Creates a grid of meetup time dives over the background image */
     border: 2px solid white;
 }
 
@@ -208,32 +204,6 @@ hr {
     line-height: 0;
 }
 
-/* Footer*/
-#social-networks {
-    text-align: center;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-}
-
-#social-networks {
-    font-size: 160%;
-    padding: 5%;
-    color: #3a3a3a;
-}
-
-/* Main content */
-main {
-    /* Enlarge main element to push footer down*/
-    flex: 1 0 auto;
-    /* Add margin at the top to prevent content from being covered by the header */
-    margin-top: 47px;
-    /* Enable flex properties for child elements */
-    display: flex;
-    flex-direction: column;
-}
-
 /* Form */
 #signup {
     background-image: url("../images/signup-image.webp");
@@ -243,16 +213,19 @@ main {
     flex-grow: 1;
 }
 
+
 #signup-form {
     color: #ffffff;
     background-color: rgba(60, 60, 60, 0.6);
     padding: 30px;
 }
 
+
 #signup-form>h2 {
     color: #fafafa;
     margin-bottom: 20px;
 }
+
 
 .text-input {
     background: transparent;
@@ -265,11 +238,13 @@ main {
     padding: 0 5px;
 }
 
+
 .radio-buttons {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
+
 
 .join-button {
     margin-top: 20px;
@@ -280,6 +255,21 @@ main {
     color: #fafafa;
 }
 
+/* Footer */
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
+}
+
 /* Media query: large or landscape phones (576px and up) */
 @media screen and (min-width: 576px) {
     #photos {
@@ -288,7 +278,7 @@ main {
     }
 }
 
-/*  Media query : for tabets and larger devices */
+/* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
 
     /* Header */
@@ -298,7 +288,6 @@ main {
         box-shadow: none;
         width: fit-content;
         padding-right: 1rem;
-
     }
 
     #menu {
@@ -319,10 +308,10 @@ main {
         margin: 0 0.5rem;
     }
 
-    /* Main Content */
+    /* Main content */
     main {
-        /* push main content down to accommodate larger header */
-        margin-top: 62px;
+        /* Push main content down to accommodate larger header */
+        margin-top: 79px;
     }
 
     /* Hero */
@@ -353,32 +342,31 @@ main {
     #photos {
         column-count: 3;
     }
+
+    /* Form */
+    #signup {
+        background-position: center;
+        position: relative;
+    }
+
+    #signup-form {
+        max-width: 400px;
+        position: absolute;
+        left: 10%;
+        top: 150px;
+    }
+
+    .text-input:hover {
+        border-color: #f16c6b;
+    }
+
+    .join-button:hover {
+        background-color: #fafafa;
+        color: #454b1b;
+    }
 }
 
-/* Form */
-#signup {
-    background-position: center;
-    position: relative;
-}
-
-#signup-form {
-    max-width: 400px;
-    position: absolute;
-    left: 10%;
-    top: 150px;
-}
-
-.text-input:hover {
-    border-color: #f16c6b;
-}
-
-.join-button:hover {
-    background-color: #fafafa;
-    color: #454b1b;
-}
-
-
-/* Large devices ( laptops and desktops, 992px and up) */
+/* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
